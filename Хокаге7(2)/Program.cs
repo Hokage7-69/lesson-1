@@ -47,3 +47,6 @@ char xChar;
 xChar = Char.Parse(Console.ReadLine());
 Console.WriteLine(xChar + " - ваше значение.");
 
+
+// Это нужное изменение
+

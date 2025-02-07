@@ -56,27 +56,88 @@ void DataType()
     // Это нужное изменение
 }
 
-while (true)
+void Condition()
 {
-    Console.WriteLine("Введите свой баланс: ");
+    while (true)
+    {
+        Console.WriteLine("Введите свой баланс: ");
 
-    int amountOfMoney = Int32.Parse(Console.ReadLine());
+        int amountOfMoney = Int32.Parse(Console.ReadLine());
 
-    if (amountOfMoney >= 200)
-    {
-        Console.WriteLine("Я богат, куплю два доширака вместо одного");
+        if (amountOfMoney >= 200)
+        {
+            Console.WriteLine("Я богат, куплю два доширака вместо одного");
+        }
+        else if (amountOfMoney > 0)
+        {
+            Console.WriteLine("Деньги есть, но не хватает, пройди мимо магазина");
+        }
+        else if (amountOfMoney < 0)
+        {
+            Console.WriteLine("Деньги задолжал сбер банку");
+        }
+        else
+        {
+            Console.WriteLine("Денег нет, продам Серёжу за доширак");
+        }
     }
-    else if (amountOfMoney > 0)
-    {
-        Console.WriteLine("Деньги есть, но не хватает, пройди мимо магазина");
-    }
-    else if (amountOfMoney < 0)
-    {
-        Console.WriteLine("Деньги задолжал сбер банку");
-    }
-    else
-    {
-        Console.WriteLine("Денег нет, продам Серёжу за доширак");
-    }
+
+
+
 }
 
+int i = 0;
+
+// Цикл с предусловием
+
+while (i < 10)
+{
+    Console.WriteLine("Счёт итерации цикла while " + i);
+    i++;
+}
+
+// Цикл с постусловием 
+i = 0;
+do
+{
+
+    Console.WriteLine("Счёт итерации цикла do-while " + i);
+    i++; 
+} while (i == 2);
+
+int multiplier = 3;
+for (int j = 1; j <= 15; j++)
+{
+    Console.WriteLine(multiplier + " * " + j + " = " + multiplier * j);
+
+}
+
+// определение массивов
+int[] array;
+int[] array2 = new int[10];
+int[] array3 = new int[5] { 1, 2, 3, 4, 5 };
+int[] array4 = { 1, 34, 23, -2, 12 };
+
+// определение многомерного массива
+
+int[,] matrix = new int[3, 3] { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
+Console.WriteLine(matrix);
+
+
+
+
+// перебор индексов в массиве
+
+for ( int e = 0; e < 10; e++)
+{
+    Console.WriteLine(array2[e]);
+    array2[e] = e + 1;
+    Console.WriteLine(array2[e]);
+}
+
+//цикл для переборов значений в массиве
+
+foreach (int c in array2)
+{ 
+    Console.WriteLine(c);
+}

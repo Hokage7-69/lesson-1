@@ -150,34 +150,57 @@ internal class Program
 
         }
 
-
-        int getSquare(int x, int y)
-        { 
-            return x * y; 
-        }
-
-      double getKVADRAT(double x)
+        void Function()
         {
-            var result = x * x;
-            return result;
+            int getSquare(int x, int y)
+            {
+                return x * y;
+            }
+
+            double getKVADRAT(double x)
+            {
+                var result = x * x;
+                return result;
+            }
+
+            Console.WriteLine(getKVADRAT(100346));
+
+            var max = Int32.MaxValue;
+            var min = Int32.MinValue;
+
+            Console.WriteLine(max + " " + min);
+
+            int getFactorial(int i)
+            {
+                int result = i!;
+
+                return result;
+            }
         }
 
-        Console.WriteLine(getKVADRAT(100346));
+        Person nikita = new Person();
 
-        var max = Int32.MaxValue;
-        var min = Int32.MinValue;
+        nikita.age = 9;
+        nikita.name = "Никита";
+        nikita.speak();
 
-        Console.WriteLine(max + " " + min);
+        Person petechka = new Person();
 
+        petechka.age = 12;
+        petechka.name = "Вася";
+        petechka.speak();
     }
 
-    int getFactorial(int i)
+    class Person()
     {
-        int result = i!;
+        public double height;
+        public int age;
+        public string name;
 
-        return result;
+        public void speak()
+        {
+            Console.WriteLine($"Меня зовут - {name}, мне {age} лет");
+        }
     }
-
-
 
 }
